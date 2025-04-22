@@ -38,13 +38,13 @@ jobs:
 
     # Test Backend Image for Vulnerabilities
     - name: Scan Backend Image for Vulnerabilities
-      uses: aquasecurity/trivy-action@v0.11.0
+      uses: aquasecurity/trivy-action@latest
       with:
         image-ref: backend:latest
 
     # Test Frontend Image for Vulnerabilities
     - name: Scan Frontend Image for Vulnerabilities
-      uses: aquasecurity/trivy-action@v0.11.0
+      uses: aquasecurity/trivy-action@latest
       with:
         image-ref: frontend:latest
 

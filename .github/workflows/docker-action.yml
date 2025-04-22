@@ -59,6 +59,8 @@ jobs:
     # Run the containers
     - name: Run Docker Compose
       run: |
+        echo "cat .env"
+        cat .env
         docker-compose up --detach  --env-file .env
 
     # Verify Backend

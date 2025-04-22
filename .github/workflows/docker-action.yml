@@ -62,6 +62,10 @@ jobs:
         echo "cat .env"
         cat .env
         docker-compose up --detach  --env-file .env
+    # Check the logs
+    - name: Check docker-compose logs
+      run: |
+         docker-compose logs
 
     # Verify Backend
     - name: Test Backend Connectivity

@@ -59,7 +59,7 @@ jobs:
     # Run the containers
     - name: Run Docker Compose
       run: |
-        docker-compose up --detach  --env-file .env --abort-on-container-exit
+        docker-compose up --detach  --env-file .env
 
     # Verify Backend
     - name: Test Backend Connectivity

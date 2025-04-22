@@ -59,7 +59,7 @@ jobs:
     # Run the containers
     - name: Run Docker Compose
       run: |
-        docker-compose up --detach  --env-file .env
+        docker-compose up --detach  --env-file .env --force-recreate
 
     # Verify Backend
     - name: Test Backend Connectivity

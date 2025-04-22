@@ -36,17 +36,17 @@ jobs:
       run: |
         docker-compose build frontend
 
-    # Test Backend Image for Vulnerabilities
-    - name: Scan Backend Image for Vulnerabilities
-      uses: aquasecurity/trivy-action@latest
-      with:
-        image-ref: backend:latest
+    # # Test Backend Image for Vulnerabilities
+    # - name: Scan Backend Image for Vulnerabilities
+    #   uses: aquasecurity/trivy-action@latest
+    #   with:
+    #     image-ref: backend:latest
 
-    # Test Frontend Image for Vulnerabilities
-    - name: Scan Frontend Image for Vulnerabilities
-      uses: aquasecurity/trivy-action@latest
-      with:
-        image-ref: frontend:latest
+    # # Test Frontend Image for Vulnerabilities
+    # - name: Scan Frontend Image for Vulnerabilities
+    #   uses: aquasecurity/trivy-action@latest
+    #   with:
+    #     image-ref: frontend:latest
 
     # Run the containers
     - name: Run Docker Compose

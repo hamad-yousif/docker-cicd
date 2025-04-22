@@ -34,15 +34,15 @@ jobs:
     - name: Create .env file
       run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" > .env
 
-    # Build Backend Image
-    - name: Build Backend
-      run: |
-        docker-compose build backend
+    # # Build Backend Image
+    # - name: Build Backend
+    #   run: |
+    #     docker-compose build backend
 
-    # Build Frontend Image
-    - name: Build Frontend
-      run: |
-        docker-compose build frontend
+    # # Build Frontend Image
+    # - name: Build Frontend
+    #   run: |
+    #     docker-compose build frontend
 
     # # Test Backend Image for Vulnerabilities
     # - name: Scan Backend Image for Vulnerabilities
@@ -59,7 +59,7 @@ jobs:
     # Run the containers
     - name: Run Docker Compose
       run: |
-        docker-compose up --detach  --env-file .env --force-recreate
+        docker-compose up --detach  --env-file .env
 
     # Verify Backend
     - name: Test Backend Connectivity
